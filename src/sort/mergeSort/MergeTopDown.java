@@ -1,4 +1,4 @@
-package sort.mergeSort;
+package sort.mergesort;
 
 //自顶向下的归并排序
 public class MergeTopDown {

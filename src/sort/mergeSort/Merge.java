@@ -1,6 +1,6 @@
-package sort.mergeSort;
+package sort.mergesort;
 
-import static sort.mergeSort.MergeTopDown.aux;
+import static sort.mergesort.MergeTopDown.aux;
 
 //原地归并的抽象方法,升序
 public class Merge{

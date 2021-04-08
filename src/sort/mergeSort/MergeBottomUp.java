@@ -1,4 +1,4 @@
-package sort.mergeSort;
+package sort.mergesort;
 
 public class MergeBottomUp {
     public static void sort(int[] a){
