@@ -16,6 +16,7 @@ import java.util.Set;
  */
 public class IsHappy {
 
+    //进行运算
     public int conversion(int num){
         int sum=0;
         while(num>0){
@@ -26,16 +27,19 @@ public class IsHappy {
     }
 
     public boolean isHappy(int n) {
+        //集合保存结果
         Set<Integer> result=new HashSet<>();
+        //进行一次运算后的值
         int changeN=conversion(n);
+        //判断运算后的结果是否出现在集合里
         while(!result.contains(changeN)){
-
-
+            //结果为1，为快乐数返回true
             if(changeN==1){
                 return true;
             }
-
+            //将结果保存到集合里
             result.add(changeN);
+            //做一次运算
             changeN=conversion(changeN);
 
         }
