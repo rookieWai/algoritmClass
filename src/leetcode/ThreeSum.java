@@ -20,6 +20,8 @@ public class ThreeSum {
         Arrays.sort(nums);
 
 
+
+
         for(int i=0;i<nums.length;i++) {
             //因为是排好序，从小到大，如果a大于零，表示不存在满足条件的三元组
             if (nums[i] > 0) {
