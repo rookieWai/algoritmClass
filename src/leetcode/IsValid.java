@@ -23,7 +23,7 @@ public class IsValid {
             if(s.charAt(i)=='(')  stack.push(')');
             else if(s.charAt(i)=='{')  stack.push('}');
             else if(s.charAt(i)=='[') stack.push(']');
-            //栈为空或者没有匹配的字符括号
+            //栈为空右扣号多了，或者没有匹配的字符括号
             else if(stack.isEmpty()||stack.peek()!=s.charAt(i)) return false;
             //stack.top与s.charAt(i)相等时，弹出元素
             else stack.pop();
@@ -33,4 +33,8 @@ public class IsValid {
         return stack.isEmpty();
 
     }
+
+
+
+
 }
