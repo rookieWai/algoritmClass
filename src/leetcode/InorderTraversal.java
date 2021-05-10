@@ -30,20 +30,24 @@ public class InorderTraversal {
     public List<Integer> inorderTraversal2(TreeNode root) {
         Stack<TreeNode> stack=new Stack<TreeNode>();
         List<Integer> result= new ArrayList<>();
+        //用来访问节点
         TreeNode pointer=new TreeNode();
 
-         pointer=root;
+        pointer=root;
 
 
         while(pointer!=null||!stack.isEmpty()){
-            //访问到最左边的结点
+            //访问到最左边的节点，依次将访问节点压入栈
             if(pointer!=null){
                 stack.push(pointer);
-                pointer=pointer.left;
-            }else {
+                pointer=pointer.left;  //左
+            }
+            //访问到最左边节点后，开始处理节点
+            else
+            {
                 pointer=stack.pop();
-                result.add(pointer.val);
-                pointer=pointer.right;
+                result.add(pointer.val); //中
+                pointer=pointer.right;   //右
             }
         }
         return result;

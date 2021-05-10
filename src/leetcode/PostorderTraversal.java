@@ -34,19 +34,19 @@ public class PostorderTraversal {
         while (!stack.isEmpty()){
             TreeNode node=stack.pop();
             if(node!=null) {
-                result.add(node.val);
+                result.add(node.val);  //中
             }else continue;
 
-            //
 
             if(node.left!=null){
-                stack.push(node.left);
+                stack.push(node.left);  //左
             }
 
             if(node.right!=null){
-                stack.push(node.right);
+                stack.push(node.right); //右
             }
         }
+        //反转
         Collections.reverse(result);
         return result;
     }

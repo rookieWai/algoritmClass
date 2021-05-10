@@ -31,21 +31,21 @@ public class PreorderTraversal {
         Stack<TreeNode> stack=new Stack<TreeNode>();
         List<Integer> result= new ArrayList<>();
 
-        //结点入栈
+        //节点入栈
         stack.push(root);
 
 
         while (!stack.isEmpty()){
             TreeNode node=stack.pop();
             if(node!=null) {
-                result.add(node.val);
+                result.add(node.val);   //中
             }else continue;
 
-            //
+            //栈时先进后出，所以压入右结点
             if(node.right!=null){
                 stack.push(node.right);
             }
-
+            //再压入左节点
             if(node.left!=null){
                 stack.push(node.left);
             }
