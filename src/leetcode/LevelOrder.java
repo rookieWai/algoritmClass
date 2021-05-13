@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * 二叉树的层次遍历
+ * 二叉树的层序遍历
  */
 public class LevelOrder {
     public List<List<Integer>> levelOrder(TreeNode root) {
